@@ -1,0 +1,69 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make the background image cover the entire viewport */
+body {
+    background-image: url("dashpic.jpg");
+    background-size: cover; /* Make sure the image covers the whole viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensure the body covers the entire viewport */
+    display: flex;
+    flex-direction: column; /* Arrange h1 and dashboard in a column */
+    align-items: center; /* Center the items horizontally */
+}
+
+/* Center and style the heading at the top of the page */
+h1 {
+    text-align: center;
+    margin-top: 20px; /* Add some spacing from the top */
+    color: white; /* Set the text color to contrast the background */
+}
+
+/* Main dashboard styling */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for a 3x2 grid */
+    gap: 20px;
+    width: 80vw; /* Use viewport width to make the grid responsive */
+    max-width: 1200px; /* Set a max-width for larger screens */
+    justify-items: center; /* Center icons inside their grid cells */
+    margin-top: 40px; /* Add some space between the h1 and dashboard */
+}
+
+/* Individual icon styling */
+.icon {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the image and text horizontally */
+    height: 180px; /* Adjust height for larger icons */
+}
+
+/* Hover effect on icons */
+.icon:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for images inside icons */
+.icon img {
+    width: 120px; /* Adjust width */
+    height: 120px; /* Adjust height */
+}
+
+/* Styling for text inside icons */
+.icon p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333; /* Text color */
+}
